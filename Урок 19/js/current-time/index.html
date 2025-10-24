@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Текущее время и дата</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .time-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .greeting {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .info-block {
+            margin: 15px 0;
+            padding: 10px;
+            background: #e9f7fe;
+            border-radius: 5px;
+        }
+
+        .time-display {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .new-year {
+            background: #ffeaa7;
+            font-weight: bold;
+        }
+
+        .full-date {
+            background: #e8f5e9;
+            font-size: 1.2em;
+        }
+
+        .timezone-info {
+            background: #f0e6ff;
+            font-size: 0.9em;
+            color: #6b46c1;
+        }
+
+        .countdown-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .countdown-item {
+            text-align: center;
+            margin: 10px;
+            min-width: 100px;
+        }
+
+        .countdown-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .countdown-label {
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="time-container">
+        <div class="greeting" id="greeting">Добрый день</div>
+
+        <div class="info-block full-date">
+            <strong>Сегодня:</strong>
+            <span id="full-date">23 октября 2025 года</span>
+        </div>
+
+        <div class="info-block">
+            <strong>День недели:</strong>
+            <span id="current-day">Четверг</span>
+        </div>
+
+        <div class="info-block">
+            <strong>Текущее время:</strong>
+            <span class="time-display" id="current-time">16:27:30</span>
+        </div>
+
+        <div class="info-block timezone-info">
+            <span id="timezone-info">Часовой пояс: Europe/Moscow (UTC+03:00)</span>
+        </div>
+
+        <div class="info-block new-year">
+            <strong>До нового года осталось:</strong>
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <div class="countdown-value" id="new-year-days">69</div>
+                    <div class="countdown-label" id="new-year-days-label">дней</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="new-year-hours">12</div>
+                    <div class="countdown-label" id="new-year-hours-label">часов</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="new-year-minutes">45</div>
+                    <div class="countdown-label" id="new-year-minutes-label">минут</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="new-year-seconds">30</div>
+                    <div class="countdown-label" id="new-year-seconds-label">секунд</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
